@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 
 const userSchema = new mongoose.Schema({
     name:{
-        type:string,
+        type:String,
         required: true
 
     },
@@ -31,4 +31,4 @@ const userSchema = new mongoose.Schema({
 );
 
 
-module.exports = mongoose.Model('user',userSchema);
+module.exports = mongoose.model('user',userSchema);

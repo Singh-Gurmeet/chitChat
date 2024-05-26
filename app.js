@@ -11,7 +11,9 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/real-chat-app');
 
 
+const userRoute = require('./routes/userRoute');
 
+app.use('/',userRoute);
 
 http.listen(port, ()=>{
     console.log(`server is running at port ${port}`);
